@@ -1,3 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 :root {
   --primary-color: #000;
   --secondary-color: #fff;
@@ -17,12 +23,6 @@ html.dark {
   color: var(--primary-color);
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 body {
   font-family: "Lexend Deca", sans-serif;
   display: flex;
@@ -32,15 +32,23 @@ body {
   overflow: hidden;
 }
 
-.t0ggle {
+.toggle {
   background-color: var(--primary-color);
-  color: var(--secondary-color);
   border: 0;
-  border-radius: 4px;
-  padding: 8px 12px;
+  border-radius: 50%;
+  padding: 8px 8px;
   position: absolute;
   top: 100px;
   cursor: pointer;
+}
+.toggle svg {
+  fill: var(--secondary-color);
+  height: 30px;
+  width: 30px;
+  display: block;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 
 .toggle:focus {
@@ -58,7 +66,6 @@ body {
   position: relative;
   width: 200px;
   height: 200px;
-  background-color: #f0f0f0;
 }
 
 .needle {
@@ -69,6 +76,7 @@ body {
   height: 65px;
   width: 3px;
   transform-origin: bottom center;
+  transition: all 0.5s ease-in;
 }
 
 .needle.hour {
@@ -126,7 +134,7 @@ body {
   border-radius: 50%;
   height: 18px;
   width: 18px;
-  display: inline-block;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   line-height: 18px;
